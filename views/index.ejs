@@ -1,0 +1,84 @@
+<%- include('./header'); %>
+  <div class="container mt-3">
+    <div class="head">
+
+      <h2>Time Table CE Sec-B</h2>
+      <h4 id="day">
+        <%= data.day %>
+      </h4>
+      
+        <h5 id="time"><%=data.time %></h5>
+        
+      
+    </div>
+
+    <div class="main">
+      
+
+
+      <%if(data.currHour>=9 && data.currHour<=16){%>
+          <p style="color: #009100;">Class Now :</p>
+          <h1 id="currClass">
+            <%=data.currClass %>
+          </h1>
+          <p style="color: #ff0000;">Class Next :</p>
+          <h4 id="nextClass">
+            <%=data.nextClass %>
+          </h4>
+      <%}else if(data.currHour<9){%>
+        <p style="color: #009100;">Class Now :</p>
+        <h1 id="currClass">
+          Class is not started yet.
+        </h1>
+        <p style="color: #ff0000;">Class Next :</p>
+        <h4 id="nextClass">
+          <%=data.TimeTable[today][0] %>
+        </h4>
+
+        <%}else{%>
+          
+          
+        <p style="color: #009100;">Class Now :</p>
+          <h1 id="currClass">
+            Yoo! Class is Over
+          </h1>
+          <%}%>
+
+    </div>
+    
+    <h3 class="mt-5" style="text-align: center;">Today's Time Table</h3>
+    <table class="table mt-1 mb-4 table-striped table-dark tab">
+      
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Subject</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% for(var i=0;i<8;i++){ %>
+          <tr>
+            <th scope="row">
+              <%=(i+9)%12%>-<%=(i+10)%12%>
+            </th>
+            <td>
+              <%=data.TimeTable[data.today][i]%>
+            </td>
+          </tr>
+          <% }; %>
+      </tbody>
+    </table>
+
+    <h5 style="text-align: center; margin-bottom: 40px;"> <a href="/timetable">Full Time Table</a></h5>
+
+
+
+
+  </div>
+
+  <%- include('./footer'); %>
+
+
+
+

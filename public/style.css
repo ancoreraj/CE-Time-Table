@@ -1,0 +1,28 @@
+body{
+    background-image: url("./clouds-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto Mono', monospace;
+}
+.head{
+    margin: auto;
+    text-align: center;
+}
+.main{
+    
+    margin-top: 40px;
+    text-align: center;
+}
+.main p{
+    font-weight: 500;
+    font-size: 19px;
+}
+.main p,h1,h4{
+    margin: 0px;
+}
+.tab{
+    max-width: 400px;
+    margin: auto;
+}

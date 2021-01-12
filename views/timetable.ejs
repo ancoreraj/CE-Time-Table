@@ -1,0 +1,69 @@
+<%- include('./header'); %>
+    <div class="container mt-5">
+        <h2>Full Time Table</h2>
+        <table class="table table-striped table-dark">
+
+            <thead>
+                <tr>
+                    <th scope="col">Time</th>
+                    <th scope="col">9-10</th>
+                    <th scope="col">10-11</th>
+                    <th scope="col">11-12</th>
+                    <th scope="col">12-1</th>
+                    <th scope="col">1-2</th>
+                    <th scope="col">2-3</th>
+                    <th scope="col">3-4</th>
+                    <th scope="col">4-5</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <th scope="row">Monday</th>
+                    
+                        
+                        <%for(var j=0;j<8;j++){%>
+                            <td><%=data.TimeTable[1][j]%></td>
+
+                        <%}%>
+                    
+                </tr>
+                <tr>
+                    <th scope="row">Tuesday</th>
+                    <%for(var j=0;j<8;j++){%>
+                        <td><%=data.TimeTable[2][j]%></td>
+
+                    <%}%>
+
+                </tr>
+                <tr>
+                    <th scope="row">Wednesday</th>
+                    <%for(var j=0;j<8;j++){%>
+                        <td><%=data.TimeTable[3][j]%></td>
+
+                    <%}%>
+
+                </tr>
+                <tr>
+                    <th scope="row">Thursday</th>
+                    <%for(var j=0;j<8;j++){%>
+                        <td><%=data.TimeTable[4][j]%></td>
+
+                    <%}%>
+
+                </tr>
+                <tr>
+                    <th scope="row">Friday</th>
+                    <%for(var j=0;j<8;j++){%>
+                        <td><%=data.TimeTable[5][j]%></td>
+
+                    <%}%>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h5 style="margin-bottom: 40px;"> <a href="/">Back To Main Page</a></h5>
+    </div>
+    <%- include('./footer'); %>

@@ -1,5 +1,6 @@
 const express = require("express");
 const ejs = require("ejs");
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -57,4 +58,4 @@ app.get('/timetable',(req,res)=>{
     res.render('timetable',{data:data})
 })
 
-app.listen(3000,console.log(`App is running on server 3000`))
+app.listen(PORT,console.log(`App is running on server 3000`))
